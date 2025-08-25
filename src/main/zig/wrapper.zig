@@ -9,7 +9,7 @@ const jobject = jui.jobject;
 const JNIEnv = jui.JNIEnv;
 
 const k32 = struct {
-    pub extern "kernel32" fn GetCommandLineW() callconv(win.WINAPI) win.LPWSTR;
+    pub extern "kernel32" fn GetCommandLineW() callconv(.winapi) win.LPWSTR;
 };
 
 fn getCommandLine(jenv: *JNIEnv) !jstring {
